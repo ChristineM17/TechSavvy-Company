@@ -74,6 +74,36 @@ section {
     margin-bottom: 20px;
 }
 
+/* Styling for testimonials section */
+#testimonials {
+    padding: 20px; /* Add padding around testimonials */
+    justify-content: center; /* Center-align testimonials horizontally */
+}
+
+/* Styling for individual testimonial */
+.testimonial {
+    padding: 15px; /* Add padding around each testimonial */
+    border: 1px solid #ccc; /* Add border to each testimonial */
+    margin-bottom: 20px; /* Add margin between testimonials */
+    background-color: #f9f9f9; /* Background color for testimonials */
+}
+
+/* Styling for testimonial text */
+.testimonial p {
+    margin: 0; /* Remove default margin for paragraph inside testimonial */
+    text-align: center;
+}
+
+
+/* Styling for testimonial author */
+.testimonial .author {
+    font-weight: bold; /* Make author name bold */
+    margin-top: 10px; /* Add margin above author name */
+    font-style: italic; /* Make author name italic */
+    color: #666; /* Color for author name */
+}
+
+
 /* Styling for form labels */
 form label {
     /* Display labels as block elements */
@@ -86,15 +116,16 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    /* Set width to 100% of the container */
-    width: 100%;
+    /* Set width to 50% of the container */
+    width: 50%;
     /* Add padding inside input fields */
     padding: 10px;
     /* Add margin below input fields */
     margin-bottom: 10px;
     /* Add border around input fields */
-    border: 1px solid #ccc;
+    border: 1px solid #0d0faa;
 }
+
 
 /* Styling for form submit button */
 form button {

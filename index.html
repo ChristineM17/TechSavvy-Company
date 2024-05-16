@@ -42,21 +42,21 @@
     <!-- Grid layout showcasing services -->
     <div class="service">
         <!-- Service 1 -->
-        <h3>Service 1</h3>
+        <h3>Custom Software Development:</h3>
         <!-- Description of service 1 -->
-        <p>Description of service 1...</p>
+        <p>We offer tailored software development solutions to meet the unique needs of businesses. Our team of experienced developers utilizes cutting-edge technologies to build robust, scalable, and user-friendly software applications.</p>
     </div>
     <div class="service">
         <!-- Service 2 -->
-        <h3>Service 2</h3>
+        <h3>Cloud Computing Services:</h3>
         <!-- Description of service 2 -->
-        <p>Description of service 2...</p>
+        <p>We specialize in cloud computing services to help businesses leverage the power of the cloud for enhanced flexibility, scalability, and cost-efficiency. From cloud migration and infrastructure setup to ongoing management and optimization, we provide comprehensive cloud solutions tailored to your specific requirements.</p>
     </div>
     <div class="service">
         <!-- Service 3 -->
-        <h3>Service 3</h3>
+        <h3>Advanced IT Consulting:</h3>
         <!-- Description of service 3 -->
-        <p>Description of service 3...</p>
+        <p>We offer strategic IT consulting services to help businesses navigate the complexities of modern technology and achieve their digital transformation goals. Our seasoned consultants work closely with clients to assess their current IT infrastructure, identify areas for improvement, and develop strategic roadmaps for technology adoption. </p>
     </div>
 </section>
 
@@ -66,13 +66,25 @@
     <h2>Testimonials</h2>
     <!-- Testimonial elements with class 'testimonial' -->
     <div class="testimonial">
-        <p>Testimonial 1...</p>
+        <p class="content">"TechSavvy has been instrumental in revolutionizing our business operations. Their custom software development expertise helped us streamline our processes and improve efficiency across the board. The team's professionalism, attention to detail, and commitment to delivering top-notch solutions have made them a valuable partner for our company."</p>
+        <p class="author">Jonathan Rejoice, CEO of Ndatala Corporation</p>
     </div>
-    <div class="testimonial" style="display: none;">
-        <p>Testimonial 2...</p>
+    
+    <div class="testimonial">
+        <p class="content">"We turned to TechSavvy for their cloud computing services, and they exceeded our expectations. Their knowledgeable team guided us through every step of the cloud migration process, ensuring a smooth transition to the cloud. Thanks to TechSavvy's expertise, we've seen significant cost savings, improved scalability, and enhanced performance in our IT infrastructure."</p>
+        <p class="author">Leonard Natalia, CTO of Veron Enterprises</p>
     </div>
-    <div class="testimonial" style="display: none;">
-        <p>Testimonial 3...</p>
+    
+    <div class="testimonial">
+        <p class="content">"TechSavvy's advanced IT consulting services have been indispensable for our company's growth. Their consultants provided strategic guidance on modernizing our IT infrastructure, implementing cybersecurity measures, and adopting emerging technologies. Their insights and recommendations have helped us stay ahead of the curve and position ourselves for success in today's competitive market."</p>
+        <p class="author">Oz Elly, Director of IT at Shazanales Industries</p>
+    </div>
+            
+            
+            
+            
+            
+            </p>
     </div>
     <!-- Navigation arrows for testimonials -->
     <button onclick="prevTestimonial()">Previous</button>
@@ -124,7 +136,7 @@
     // Form validation
     document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault();
-
+        
         // Get form fields
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -148,6 +160,7 @@
         // Replace alert with actual form submission code
         alert('Form submitted successfully!');
     });
+
 
     // Testimonials slider
     let index = 0;
@@ -175,4 +188,3 @@
 
 </body>
 </html>
-
