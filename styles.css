@@ -1,0 +1,123 @@
+/* Set font family for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the header section */
+header {
+    /* Background color: dark blue */
+    background-color: #1a237e;
+    /* Text color: light gray */
+    color: #eeeeee;
+    /* Add padding around the content */
+    padding: 20px;
+    /* Use flexbox for layout */
+    display: flex;
+    /* Space between items in the header */
+    justify-content: space-between;
+    /* Align items in the center vertically */
+    align-items: center;
+}
+
+/* Style for the logo */
+header img {
+    /* Set maximum height to ensure the logo does not exceed a certain size */
+    max-height: 80px; /* Adjust as needed */
+    /* Maintain aspect ratio */
+    width: auto;
+    height: auto;
+}
+
+/* Styling for navigation menu */
+nav ul {
+    /* Remove default list styling */
+    list-style-type: none;
+    /* Remove margin */
+    margin: 0;
+    /* Remove padding */
+    padding: 0;
+  
+}
+
+/* Styling for list items in the navigation menu */
+nav ul li {
+    /* Display items inline */
+    display: inline;
+    /* Add margin to separate items */
+    margin-right: 20px;
+}
+
+/* Styling for links in the navigation menu */
+nav ul li a {
+    /* Text color: light gray */
+    color: #eeeeee;
+    /* Remove underline */
+    text-decoration: none;
+}
+
+/* Styling for sections */
+section {
+    /* Add padding around the content */
+    padding: 20px;
+}
+
+/* Styling for service items */
+.service {
+    /* Add border around service items */
+    border: 1px solid #ccc;
+    /* Add padding inside service items */
+    padding: 10px;
+    /* Add margin between service items */
+    margin-bottom: 20px;
+}
+
+/* Styling for form labels */
+form label {
+    /* Display labels as block elements */
+    display: block;
+    /* Add margin below labels */
+    margin-bottom: 5px;
+}
+
+/* Styling for form input fields and textareas */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    /* Set width to 100% of the container */
+    width: 100%;
+    /* Add padding inside input fields */
+    padding: 10px;
+    /* Add margin below input fields */
+    margin-bottom: 10px;
+    /* Add border around input fields */
+    border: 1px solid #ccc;
+}
+
+/* Styling for form submit button */
+form button {
+    /* Background color: dark blue */
+    background-color: #1a237e;
+    /* Text color: light gray */
+    color: #eeeeee;
+    /* Add padding around button text */
+    padding: 10px 20px;
+    /* Remove border */
+    border: none;
+    /* Change cursor to pointer on hover */
+    cursor: pointer;
+}
+
+/* Styling for footer section */
+footer {
+    /* Background color: dark blue */
+    background-color: #1a237e;
+    /* Text color: light gray */
+    color: #eeeeee;
+    /* Center-align text */
+    text-align: center;
+    /* Add padding around the content */
+    padding: 20px;
+}

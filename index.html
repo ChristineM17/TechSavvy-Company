@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define character set and viewport for better rendering on devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>TechSavvy</title>
+    <!-- Link to external stylesheet for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header section containing company logo and navigation menu -->
+<header>
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <!-- Links to different sections of the page -->
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Company logo (placeholder image) -->
+    <img src="images/techsavvyLogo3.png" alt="TechSavvy Logo">
+</header>
+
+<!-- About Us section -->
+<section id="about">
+    <!-- Heading for About Us section -->
+    <h2>About Us</h2>
+    <!-- Brief description of the company -->
+    <p>TechSavvy is a cutting-edge technology company specializing in innovative solutions for businesses of all sizes. With a team of skilled professionals dedicated to staying ahead of the curve, we provide customized software development, cloud computing services, and advanced IT consulting. Our mission is to empower businesses to thrive in the digital age through reliable and scalable technology solutions. At TechSavvy, we blend creativity with technical expertise to deliver results that exceed expectations.</p>
+</section>
+
+<!-- Services section -->
+<section id="services">
+    <!-- Heading for Services section -->
+    <h2>Services</h2>
+    <!-- Grid layout showcasing services -->
+    <div class="service">
+        <!-- Service 1 -->
+        <h3>Service 1</h3>
+        <!-- Description of service 1 -->
+        <p>Description of service 1...</p>
+    </div>
+    <div class="service">
+        <!-- Service 2 -->
+        <h3>Service 2</h3>
+        <!-- Description of service 2 -->
+        <p>Description of service 2...</p>
+    </div>
+    <div class="service">
+        <!-- Service 3 -->
+        <h3>Service 3</h3>
+        <!-- Description of service 3 -->
+        <p>Description of service 3...</p>
+    </div>
+</section>
+
+<!-- Testimonials section -->
+<section id="testimonials">
+    <!-- Heading for Testimonials section -->
+    <h2>Testimonials</h2>
+    <!-- Testimonial elements with class 'testimonial' -->
+    <div class="testimonial">
+        <p>Testimonial 1...</p>
+    </div>
+    <div class="testimonial" style="display: none;">
+        <p>Testimonial 2...</p>
+    </div>
+    <div class="testimonial" style="display: none;">
+        <p>Testimonial 3...</p>
+    </div>
+    <!-- Navigation arrows for testimonials -->
+    <button onclick="prevTestimonial()">Previous</button>
+    <button onclick="nextTestimonial()">Next</button>
+</section>
+
+<!-- Contact Us section -->
+<section id="contact">
+    <!-- Heading for Contact Us section -->
+    <h2>Contact Us</h2>
+    <!-- Contact form -->
+    <form action="#" method="POST">
+        <!-- Name field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <!-- Email field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <!-- Subject field -->
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+        <!-- Message field -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- Footer section -->
+<footer>
+    <!-- Copyright notice -->
+    <p>&copy; 2024 TechSavvy. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript code -->
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Form validation
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form fields
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate fields
+        if (name === '' || email === '' || subject === '' || message === '') {
+            alert('Please fill out all fields.');
+            return;
+        }
+
+        // Additional validation for email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // If all fields are filled and email is valid, submit the form
+        // Replace alert with actual form submission code
+        alert('Form submitted successfully!');
+    });
+
+    // Testimonials slider
+    let index = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    const totalTestimonials = testimonials.length;
+
+    function showTestimonial(n) {
+        testimonials.forEach(testimonial => testimonial.style.display = 'none');
+        testimonials[n].style.display = 'block';
+    }
+
+    function nextTestimonial() {
+        index = (index + 1) % totalTestimonials;
+        showTestimonial(index);
+    }
+
+    function prevTestimonial() {
+        index = (index - 1 + totalTestimonials) % totalTestimonials;
+        showTestimonial(index);
+    }
+
+    // Automatically transition between testimonials every 5 seconds
+    setInterval(nextTestimonial, 5000);
+</script>
+
+</body>
+</html>
+
